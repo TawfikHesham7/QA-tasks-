@@ -1,0 +1,193 @@
+Name : Hesham Omar 
+
+
+TASK # 1
+1-	Opening the browser 
+WebDriver driver = new ChromeDriver();
+driver.get("   WebDriver driver = new ChromeDriver();
+driver.get("https://staging.mazaady.com/login");
+driver.manage().window().maximize();
+
+
+try {
+	Thread.sleep(2000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+
+2-	Login
+WebElement Emailaddress = driver.findElement(By.id("email ")) ;
+
+Emailaddress.sendKeys("test22@gmail.com ");
+
+
+
+WebElement Password = driver.findElement(By.id("password")) ; 
+
+Password.sendKeys("123456789");
+
+
+3-	//Click on Login  button 
+WebElement login   = driver.findElement(By.class("btn btn-lg btn-login btn-block")) ; 
+
+
+
+Task#2
+
+4-	// Choosing test drop down menu  
+WebElement Test = driver.findElement(By.text("test")) ; 
+Test.click ;
+
+
+
+5-	Add product 
+
+WebElement Addproduct = driver.findElement(By.text("Add Product")) ; 
+Addproduct.click ;
+
+
+
+6-	Pressing second step 
+
+WebElement secondstep = driver.findElement(By.text("second step ")) ; 
+secondstep.click ;
+
+
+
+
+
+
+
+
+7-	// Filling Auction Name 
+  WebElement  AuctionName= driver.findElement(By.class("form-control has-error")) ; 
+AuctionName.sendKeys("Ahmed Mohamed"); 
+
+
+8-	// Selecting from drop down options (Select category )
+
+WebElement category = driver.findElement(By.text("select category")) ; 
+
+Select selectoptions = new Select(category) ; 
+
+
+//Selecting FURNITURE &amp; FURNISHINGS FITTINGS
+
+selectoptions.selectByVisibleText(“FURNITURE &amp; FURNISHINGS FITTINGS”) ; 
+
+
+
+
+
+9-	// Selecting Sub category 
+
+
+WebElement subcategory = driver.findElement(By.xpath("//*[@id="vs4__combobox"]/div[1]/input")) ; 
+
+Select selectsecondaryoptions = new Select(subcategory) ; 
+
+selectsecondaryoptions.selectByVisibleText(“Furniture , Furnishings”); 
+
+
+
+
+
+
+
+
+
+10-	// Filling length 
+WebElement Length = driver.findElement(By.name("68")) ; 
+Length.sendKeys("7");
+
+
+
+11-	// Filling width 
+
+WebElement Width = driver.findElement(By.name("69")) ; 
+Width.sendKeys("4");
+
+12-	// Filling height 
+
+ 
+
+WebElement Height = driver.findElement(By.name("70")) ; 
+Width.sendKeys("0.5");
+
+
+
+13-	// Quantity 
+
+       WebElement Quantity = driver.findElement(By.name("quantity")) ; 
+ Quantity.sendKeys("1");
+
+14-	//Filling Product address 
+WebElement ProductAddress= driver.findElement(By.xpath("//*[@id="step-2"]/span/div[2]/div[7]/div/span[2]/input")) ; 
+
+
+ProductAddress.sendKeys("MXXM+X8 Uznova, Albania ");
+
+
+
+
+15-	// Choosing country 
+
+WebElement Country  = driver.findElement(By.xpath("//*[@id="vs5__combobox"]/div[1]/input")) ; 
+
+Select Countries = new Select(Country) ; 
+
+Countries.selectByVisibleText(“Albania”); 
+
+16-	//Selecting  state 
+WebElement  state  = driver.findElement(By.xpath("//*[@id="vs6__combobox"]/div[1]/input")) ; 
+
+Select regions = new Select(state) ; 
+
+regions.selectByVisibleText(“Berat”); 
+
+
+
+17-	// Selecting City 
+WebElement  City   = driver.findElement(By.xpath("//*[@id="vs7__combobox"]/div[1]/input")) ; 
+
+Select Cities = new Select(City) ; 
+
+Cities.selectByVisibleText(“Agim”); 
+
+
+18-	// Choosing the image , as we will download the image firstly then upload it 
+// Downloading the image 
+
+WebElement downloadpic = driver.findElement(By.id("__JSBridgeIframe_1.0__ "));
+        
+String Picsource = downloadButton.getAttribute("href");
+      
+  String wget_command = "C:\\ـــــــــــــ " + Picsource
+
+// Uploading the pic 
+
+
+  WebElement uploadPic = driver.findElement(By.xpath("//*[@id="step-2"]/span/div[2]/div[10]/div/div/div[1]/div/div[3]/label "));
+
+        
+        uploadElement.sendKeys("C:\\______________");
+
+
+
+
+
+19-	// Pressing at  Next Step button (using CSS selector )
+
+
+
+WebElement Nextstep = driver.findElement(By.cssSelector("button.btn btn-buy continue ")) ; 
+   Nextstep.click ;
+
+20-	// Filling Estimated value 
+
+WebElement EstimatedaVlue = driver.findElement(By.name("estimated_value")) ; 
+ EstimatedaVlue.sendKeys("1");
+
+
